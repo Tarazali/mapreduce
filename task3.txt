@@ -1,0 +1,9 @@
+select category, count(sales)
+from minipurchases
+(
+	case
+		when count(*) == 6
+		else print "Should be 6 elements!"
+)
+group by category
+order by category asc
