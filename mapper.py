@@ -37,6 +37,9 @@ for line in sys.stdin:
     # store the 6 elements of the tuple in seperate variables
     if len(data) == 6:
     	date, time, item, category, sales, payment = data
+	my_cat = ('Computers', 'Cameras', 'Video Games')
+	if category in my_cat:
+		sys.stdout.write("{0}\t{1}\n".format(category, sales))
     else:
     	print("Error:Should be 6 elements inside of tuple!")
 
@@ -44,4 +47,3 @@ for line in sys.stdin:
     # Key is the payment, value is the sales     
     # With a tab (\t) between key and value
     # New line \n means new record
-    sys.stdout.write("{0}\t{1}\n".format(category, sales))
