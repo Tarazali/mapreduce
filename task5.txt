@@ -1,0 +1,6 @@
+select category, count(sales)
+from minipurchases
+where category in ('Computers','Cameras','Video Games')
+group by category
+having count(sales) > 114
+order by category asc

@@ -37,7 +37,7 @@ for line in sys.stdin:
     # store the 6 elements of the tuple in seperate variables
     if len(data) == 6:
     	date, time, item, category, sales, payment = data
-	my_cat = ('Computers', 'Cameras', 'Video Games')
+	my_cat = ('Video Games', 'Computers', 'Cameras')
 	if category in my_cat:
 		sys.stdout.write("{0}\t{1}\n".format(category, sales))
     else:
