@@ -1,0 +1,4 @@
+select category, sum(sales)
+from minipurchases
+group by category
+order by category asc
