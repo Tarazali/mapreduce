@@ -1,0 +1,6 @@
+select category, avg(sales)
+from minipurchases
+where category in ('Computers','Cameras','Video Games')
+group by category
+having avg(sales)>114
+order by category asc
